@@ -9,11 +9,11 @@ import Foundation
 
 
 class UniversityRepository {
-    private let networkClient: NetworkClientProtocol
+    private let universityApiSevice: UniversityApiSeviceProtocol
     private let realm: UniversityCachingProtocol
     
-    init(networkClient: NetworkClientProtocol, realm: UniversityCachingProtocol) {
-        self.networkClient = networkClient
+    init(universityApiSevice: UniversityApiSeviceProtocol, realm: UniversityCachingProtocol) {
+        self.universityApiSevice = universityApiSevice
         self.realm = realm
     }
 }
@@ -22,7 +22,7 @@ class UniversityRepository {
 extension  UniversityRepository: UniversityRepositoryProtocol{
     func fetchUniversities(completion: @escaping (FetchedResult) -> Void) {
         if Reachability.shared.isConnectedToNetwork() {
-            networkClient.fetchUniversities { result  in
+            universityApiSevice.fetchUniversities { result  in
                 switch result {
                 case .success(let response):
                     let universityCellViewModel = self.mapToViewModel(response: response)

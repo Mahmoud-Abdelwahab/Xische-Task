@@ -15,16 +15,15 @@ class UniversityListRouter {
 extension UniversityListRouter: UniversityListRouterProtocol {
     
     // MARK: - Methods
-    static func assembleModule() -> UIViewController {
+    static func assembleModule(universityApiService: UniversityApiSeviceProtocol,
+                               realmManager: UniversityCachingProtocol) -> UIViewController {
         let view = UniversityListViewController()
-//        let apiService = ADPSmartLicenseAPIService()
-//        let remoteDataSource = ADPSmartLicenseRemoteDataSource(smartLicenseAPIService: apiService)
-//        let repository = ADPSmartLicenseRepository(remoteDataSource: remoteDataSource)
-//        let interactor = ADPLicenceBanDetailsInteractor(repository: repository)
+        let repository = UniversityRepository(universityApiSevice: universityApiService, realm: realmManager)
+        let interactor = UniversityListInteractore(universityRepository: repository)
         let router = UniversityListRouter()
-    //    let presenter = UniversityListPresent
-  //      view.presenter = presenter
-    //    interactor.presenter = presenter
+        let presenter = UniversityListPresenter(view: view, interactor: interactor, router: router)
+        view.presenter = presenter
+        interactor.presenter = presenter
         router.viewController = view
         
         return view

@@ -54,7 +54,7 @@ public protocol UniversityCachingProtocol {
 }
 
 //MARK: - NetworkService
-public protocol NetworkClientProtocol {
+public protocol UniversityApiSeviceProtocol {
     func fetchUniversities(completion: @escaping (Result<[UniversityResponse], Error>) -> Void)
 }
 //MARK: - Repository

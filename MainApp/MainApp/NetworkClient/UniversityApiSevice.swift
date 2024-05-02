@@ -1,5 +1,5 @@
 //
-//  NetworkClient.swift
+//  UniversityApiSevice.swift
 //  List
 //
 //  Created by Mahmoud Abdelwahab on 02/05/2024.
@@ -8,7 +8,7 @@
 import Foundation
 import UniversityList
 
-public class NetworkClient: NetworkClientProtocol {
+public class UniversityApiSevice: UniversityApiSeviceProtocol {
     private let urlSession: URLSession
     private let baseURL = "\(Constants.baseURL)/search?country=United Arab Emirates"
     
