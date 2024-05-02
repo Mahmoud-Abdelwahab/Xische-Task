@@ -39,7 +39,10 @@ extension  UniversityRepository: UniversityRepositoryProtocol{
             completion(.success(universities))
         }
     }
-    
+}
+
+//MARK: - Private Handlers
+extension  UniversityRepository {
     private func mapToViewModel(response: [UniversityResponse])-> [UniversityCellVM] {
        let universityCellViewModel =  response.map {
             $0.toUniversityCellVM()
@@ -50,23 +53,13 @@ extension  UniversityRepository: UniversityRepositoryProtocol{
     
     private func saveUniversitiesToRealm(_ universities: [UniversityCellVM])  {
         do {
-            try realm.cachingUniversitiesFromCache(universities)
+            try realm.saveUniversitiesToRealmDB(universities)
         } catch {
             debugPrint(error)
         }
     }
  
     private func fetchUniversitiesFromRealm() -> [UniversityCellVM]? {
-        let universityObjects = realm.objects(UniversityObject.self)
-        return Array(universityObjects).map { universityObject in
-            University(
-                name: universityObject.name,
-                stateProvince: universityObject.stateProvince,
-                domains: Array(universityObject.domains),
-                webPages: Array(universityObject.webPages),
-                alphaTwoCode: universityObject.alphaTwoCode,
-                country: universityObject.country
-            )
-        }
+        realm.fetchUniversitiesFromRealmDB()
     }
 }

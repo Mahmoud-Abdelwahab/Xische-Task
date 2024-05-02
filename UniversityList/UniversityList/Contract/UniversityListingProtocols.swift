@@ -10,8 +10,10 @@ import Foundation
 
 // MARK: - View
 protocol UniversityListViewProtocol: AnyObject {
-   // func displayUniversities(_ universities: [University])
-    func displayError(_ errorMessage: String)
+//    func displayError(_ errorMessage: String)
+    func displayUniversities()
+    func showLoader()
+    func hideLoader()
 }
 
 // MARK: - Presenter
@@ -21,6 +23,7 @@ protocol UniversityListPresenterProtocol {
          router: UniversityListRouterProtocol)
     func viewDidLoad()
     func numberOfRows() -> Int
+    func didSelect(_ universityIndex: IndexPath)
     func configureCell(_ cell: UniversityTableViewCellProtocol,_ indexPath: IndexPath)
 }
 
@@ -36,7 +39,7 @@ protocol UniversityListInteractorOutputProtocol: AnyObject {
 
 // MARK: - Router
 protocol UniversityListRouterProtocol {
-    
+    func showAlert(with message: String)
 }
 
 // MARK: -  University Cell Protocol

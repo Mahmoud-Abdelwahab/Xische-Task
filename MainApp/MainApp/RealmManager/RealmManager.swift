@@ -49,9 +49,4 @@ extension RealmManager: UniversityCachingProtocol {
             universityObject.toUniversityCellVM()
         }
     }
-    
-    func fetchUniversitiesFromRealm() -> [UniversityObject]? {
-        let universityObjects = realm.objects(UniversityObject.self)
-        return Array(universityObjects)
-    }
 }

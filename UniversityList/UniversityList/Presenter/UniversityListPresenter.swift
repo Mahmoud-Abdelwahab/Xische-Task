@@ -13,7 +13,7 @@ class UniversityListPresenter {
     weak var view: UniversityListViewProtocol?
     let interactor: UniversityListInteractorInputProtocol
     let router: UniversityListRouterProtocol
-    var cellModels: [UniversityCellVM] = []
+    var cellVMs: [UniversityCellVM] = []
   
     required init(view: UniversityListViewProtocol,
                   interactor: UniversityListInteractorInputProtocol,
@@ -27,28 +27,36 @@ class UniversityListPresenter {
 
 extension UniversityListPresenter: UniversityListPresenterProtocol {
     func viewDidLoad() {
+        view?.showLoader()
         interactor.fetchUniversities()
     }
     
     func configureCell(_ cell: UniversityTableViewCellProtocol, _ indexPath: IndexPath) {
-        let cellModel = cellModels[indexPath.row]
+        let cellModel = cellVMs[indexPath.row]
         cell.configure(with: cellModel)
     }
     
     func numberOfRows() -> Int {
-        cellModels.count
+        cellVMs.count
+    }
+    
+    func didSelect(_ universityIndex: IndexPath) {
+        let cellModel = cellVMs[universityIndex.row]
+        print("🚀", cellModel)
     }
 }
 
 // MARK: - Interactore To Presenter
 extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
-  
-    
+
     func universitiesFetched(_ universities: [UniversityCellVM]) {
-      //  view?.displayUniversities(universities)
+        view?.hideLoader()
+        cellVMs = universities
+        view?.displayUniversities()
     }
     
     func fetchFailed(with error: Error) {
-        view?.displayError(error.localizedDescription)
+        view?.hideLoader()
+        router.showAlert(with: error.localizedDescription)
     }
 }

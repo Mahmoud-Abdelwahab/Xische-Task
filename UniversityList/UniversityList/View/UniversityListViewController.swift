@@ -11,10 +11,21 @@ public class UniversityListViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var universityTableView: UITableView!
+    @IBOutlet weak var activityIndicatore: UIActivityIndicatorView!
     
     // MARK: - Attributes
     var presenter: UniversityListPresenterProtocol!
 
+    // MARK: - Init
+    public init() {
+        let frameworkBundle = Bundle(for: type(of: self))
+        super.init(nibName: nil, bundle: frameworkBundle)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Life Cycle
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,19 +40,41 @@ public class UniversityListViewController: UIViewController {
     
 }
 
+
+// MARK: - View Methods
+extension UniversityListViewController: UniversityListViewProtocol {
+    
+    func showLoader() {
+        activityIndicatore.startAnimating()
+    }
+    
+    func hideLoader() {
+        activityIndicatore.stopAnimating()
+    }
+    
+    func displayUniversities() {
+        universityTableView.reloadData()
+    }
+}
+
+// MARK: - Private Handlers
 extension UniversityListViewController {
     
     private func configureViewContoller() {
         view.backgroundColor = .systemBackground
+        activityIndicatore.hidesWhenStopped = true
         configureTableView()
     }
     
     private func configureTableView() {
-        universityTableView
+        universityTableView.delegate = self
+        universityTableView.dataSource = self
+        universityTableView.register(UINib(nibName: "UniversityTableViewCell", bundle: nil), forCellReuseIdentifier: "UniversityTableViewCell")
+
     }
 }
 
-
+// MARK: - TableView DataSource
 extension UniversityListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.numberOfRows()
@@ -49,7 +82,16 @@ extension UniversityListViewController: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UniversityTableViewCell") as?  UniversityTableViewCell else { return UITableViewCell()}
+        cell.accessoryType = .disclosureIndicator
         presenter.configureCell(cell, indexPath)
         return cell
+    }
+}
+
+// MARK: - TableView Delegate Method
+extension UniversityListViewController: UITableViewDelegate {
+    
+   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       presenter.didSelect(indexPath)
     }
 }
