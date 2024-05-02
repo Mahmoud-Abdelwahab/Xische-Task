@@ -7,7 +7,7 @@
 
 import UIKit
 
-final public class UniversityListViewController: UIViewController {
+ public class UniversityListViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
