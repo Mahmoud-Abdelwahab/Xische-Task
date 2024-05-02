@@ -13,4 +13,12 @@ public struct UniversityCellVM {
     public let webPage: String
     public let countryCode: String
     public let country: String
+    
+    public init(name: String, stateProvince: String, webPage: String, countryCode: String, country: String) {
+        self.name = name
+        self.stateProvince = stateProvince
+        self.webPage = webPage
+        self.countryCode = countryCode
+        self.country = country
+    }
 }

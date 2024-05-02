@@ -9,14 +9,15 @@ import Foundation
 
 
 // MARK: - View
-protocol UniversityListViewProtocol {
-    
+protocol UniversityListViewProtocol: AnyObject {
+   // func displayUniversities(_ universities: [University])
+    func displayError(_ errorMessage: String)
 }
 
 // MARK: - Presenter
 protocol UniversityListPresenterProtocol {
     init(view: UniversityListViewProtocol,
-         interactor: UniversityListInteractoreProtocol,
+         interactor: UniversityListInteractorInputProtocol,
          router: UniversityListRouterProtocol)
     func viewDidLoad()
     func numberOfRows() -> Int
@@ -24,8 +25,13 @@ protocol UniversityListPresenterProtocol {
 }
 
 // MARK: - Interactor
-protocol UniversityListInteractoreProtocol {
-    
+protocol UniversityListInteractorInputProtocol {
+    func fetchUniversities()
+}
+
+protocol UniversityListInteractorOutputProtocol: AnyObject {
+    func universitiesFetched(_ universities: [UniversityCellVM])
+    func fetchFailed(with error: Error)
 }
 
 // MARK: - Router
@@ -36,4 +42,20 @@ protocol UniversityListRouterProtocol {
 // MARK: -  University Cell Protocol
 protocol UniversityTableViewCellProtocol {
     func configure(with model:  UniversityCellVM)
+}
+
+//MARK: - RealmManager
+public protocol UniversityCachingProtocol {
+    func saveUniversitiesToRealmDB(_ universities: [UniversityCellVM]) throws
+    func fetchUniversitiesFromRealmDB() -> [UniversityCellVM]?
+}
+
+//MARK: - NetworkService
+public protocol NetworkClientProtocol {
+    func fetchUniversities(completion: @escaping (Result<[UniversityResponse], Error>) -> Void)
+}
+//MARK: - Repository
+protocol UniversityRepositoryProtocol {
+    typealias FetchedResult = Result<[UniversityCellVM], Error>
+    func fetchUniversities(completion: @escaping (FetchedResult) -> Void)
 }

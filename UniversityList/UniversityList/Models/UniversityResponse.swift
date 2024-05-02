@@ -19,3 +19,13 @@ public struct UniversityResponse: Decodable {
            case stateProvince = "state-province"
        }
 }
+
+extension UniversityResponse {
+    func toUniversityCellVM() -> UniversityCellVM {
+        UniversityCellVM(name: self.name,
+                         stateProvince: self.stateProvince ?? "- - -",
+                         webPage: self.webPages.first ?? "",
+                         countryCode: self.alphaTwoCode,
+                         country: self.country)
+    }
+}

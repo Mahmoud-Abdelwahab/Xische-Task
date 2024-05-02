@@ -18,7 +18,8 @@ public class UniversityListViewController: UIViewController {
     // MARK: - Life Cycle
     public override func viewDidLoad() {
         super.viewDidLoad()
-    
+        configureViewContoller()
+        presenter.viewDidLoad()
     }
 
     // MARK: - Deallocation
@@ -26,6 +27,18 @@ public class UniversityListViewController: UIViewController {
         debugPrint("\(UniversityListViewController.self)  released from memory 🧨")
     }
     
+}
+
+extension UniversityListViewController {
+    
+    private func configureViewContoller() {
+        view.backgroundColor = .systemBackground
+        configureTableView()
+    }
+    
+    private func configureTableView() {
+        universityTableView
+    }
 }
 
 

@@ -18,6 +18,11 @@
 		4B4218E92BE3E674001B911C /* UniversityCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E82BE3E674001B911C /* UniversityCellVM.swift */; };
 		4B4218ED2BE3E6F4001B911C /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218EB2BE3E6F4001B911C /* UniversityTableViewCell.swift */; };
 		4B4218EE2BE3E6F4001B911C /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4218EC2BE3E6F4001B911C /* UniversityTableViewCell.xib */; };
+		4B4218F32BE3F8BD001B911C /* UniversityListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218F22BE3F8BD001B911C /* UniversityListRouter.swift */; };
+		4B4218F62BE3F8FB001B911C /* UniversityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218F52BE3F8FB001B911C /* UniversityListPresenter.swift */; };
+		4B4218F92BE3F936001B911C /* UniversityListInteractore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218F82BE3F936001B911C /* UniversityListInteractore.swift */; };
+		4B4218FC2BE40D96001B911C /* UniversityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218FB2BE40D96001B911C /* UniversityRepository.swift */; };
+		4B4218FF2BE41255001B911C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218FE2BE41255001B911C /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,11 @@
 		4B4218E82BE3E674001B911C /* UniversityCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCellVM.swift; sourceTree = "<group>"; };
 		4B4218EB2BE3E6F4001B911C /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
 		4B4218EC2BE3E6F4001B911C /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
+		4B4218F22BE3F8BD001B911C /* UniversityListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListRouter.swift; sourceTree = "<group>"; };
+		4B4218F52BE3F8FB001B911C /* UniversityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListPresenter.swift; sourceTree = "<group>"; };
+		4B4218F82BE3F936001B911C /* UniversityListInteractore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListInteractore.swift; sourceTree = "<group>"; };
+		4B4218FB2BE40D96001B911C /* UniversityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRepository.swift; sourceTree = "<group>"; };
+		4B4218FE2BE41255001B911C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,7 @@
 		4B42184A2BE3D4EF001B911C = {
 			isa = PBXGroup;
 			children = (
+				4B4218FD2BE410FF001B911C /* Helper */,
 				4B4218562BE3D4EF001B911C /* UniversityList */,
 				4B4218622BE3D4EF001B911C /* UniversityListTests */,
 				4B4218552BE3D4EF001B911C /* Products */,
@@ -85,9 +96,13 @@
 		4B4218562BE3D4EF001B911C /* UniversityList */ = {
 			isa = PBXGroup;
 			children = (
+				4B4218FA2BE3F968001B911C /* Repository */,
+				4B4218AF2BE3D7EB001B911C /* View */,
+				4B4218F42BE3F8DE001B911C /* Presenter */,
+				4B4218F72BE3F91E001B911C /* Interactor */,
+				4B4218F12BE3F8A7001B911C /* Router */,
 				4B4218E52BE3E606001B911C /* Contract */,
 				4B4218B72BE3DB97001B911C /* Models */,
-				4B4218AF2BE3D7EB001B911C /* View */,
 				4B4218572BE3D4EF001B911C /* UniversityList.h */,
 				4B4218582BE3D4EF001B911C /* UniversityList.docc */,
 			);
@@ -136,6 +151,46 @@
 				4B4218EC2BE3E6F4001B911C /* UniversityTableViewCell.xib */,
 			);
 			path = UniversityCell;
+			sourceTree = "<group>";
+		};
+		4B4218F12BE3F8A7001B911C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218F22BE3F8BD001B911C /* UniversityListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4B4218F42BE3F8DE001B911C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218F52BE3F8FB001B911C /* UniversityListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4B4218F72BE3F91E001B911C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218F82BE3F936001B911C /* UniversityListInteractore.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4B4218FA2BE3F968001B911C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218FB2BE40D96001B911C /* UniversityRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4B4218FD2BE410FF001B911C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218FE2BE41255001B911C /* Reachability.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,11 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4218E72BE3E62A001B911C /* UniversityListingProtocols.swift in Sources */,
+				4B4218FC2BE40D96001B911C /* UniversityRepository.swift in Sources */,
 				4B4218ED2BE3E6F4001B911C /* UniversityTableViewCell.swift in Sources */,
 				4B4218E92BE3E674001B911C /* UniversityCellVM.swift in Sources */,
+				4B4218F92BE3F936001B911C /* UniversityListInteractore.swift in Sources */,
 				4B4218B92BE3DBC2001B911C /* UniversityResponse.swift in Sources */,
 				4B4218B22BE3D810001B911C /* UniversityListViewController.swift in Sources */,
+				4B4218FF2BE41255001B911C /* Reachability.swift in Sources */,
 				4B4218592BE3D4EF001B911C /* UniversityList.docc in Sources */,
+				4B4218F62BE3F8FB001B911C /* UniversityListPresenter.swift in Sources */,
+				4B4218F32BE3F8BD001B911C /* UniversityListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

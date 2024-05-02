@@ -6,6 +6,7 @@
 //
 //
 import RealmSwift
+import UniversityList
 
 public class RealmManager {
     public static let shared = RealmManager()
@@ -20,29 +21,37 @@ public class RealmManager {
     }
 }
 
-extension RealmManager {
+extension RealmManager: UniversityCachingProtocol {
     
-     func saveUniversitiesToRealm(_ universities: [UniversityObject]) throws {
-          do {
-              try realm.write {
-                  realm.deleteAll()
-                  for university in universities {
-                      let universityObject = UniversityObject()
-                      universityObject.name = university.name
-                      universityObject.stateProvince = university.stateProvince
-                      universityObject.webPages.append(objectsIn: university.webPages)
-                      universityObject.alphaTwoCode = university.alphaTwoCode
-                      universityObject.country = university.country
-                      realm.add(universityObject)
-                  }
-              }
-          } catch {
-              throw error
-          }
-      }
-      
+    public func saveUniversitiesToRealmDB(_ universities: [UniversityCellVM]) throws {
+        do {
+            try realm.write {
+                realm.deleteAll()
+                for university in universities {
+                    let universityObject = UniversityObject()
+                    universityObject.name = university.name
+                    universityObject.stateProvince = university.stateProvince
+                    universityObject.webPage = university.webPage
+                    universityObject.alphaTwoCode = university.countryCode
+                    universityObject.country = university.country
+                    realm.add(universityObject)
+                }
+            }
+        } catch {
+            throw error
+        }
+    }
+    
+    public func fetchUniversitiesFromRealmDB() -> [UniversityCellVM]? {
+        let universityObjects = realm.objects(UniversityObject.self)
+        let universityObjectsArray = Array(universityObjects)
+        return universityObjectsArray.map { universityObject in
+            universityObject.toUniversityCellVM()
+        }
+    }
+    
     func fetchUniversitiesFromRealm() -> [UniversityObject]? {
-          let universityObjects = realm.objects(UniversityObject.self)
-          return Array(universityObjects)
-      }
+        let universityObjects = realm.objects(UniversityObject.self)
+        return Array(universityObjects)
+    }
 }
