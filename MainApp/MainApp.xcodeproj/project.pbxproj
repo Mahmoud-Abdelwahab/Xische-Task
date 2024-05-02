@@ -18,12 +18,12 @@
 		4B4218A62BE3D528001B911C /* UniversityList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4218742BE3D4EF001B911C /* UniversityList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4B4218A82BE3D52F001B911C /* UniversityDetails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4218A12BE3D517001B911C /* UniversityDetails.framework */; };
 		4B4218A92BE3D52F001B911C /* UniversityDetails.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4218A12BE3D517001B911C /* UniversityDetails.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4B4218B62BE3DB7D001B911C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218B52BE3DB7D001B911C /* NetworkClient.swift */; };
-		4B4218BC2BE3DC3F001B911C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218BB2BE3DC3F001B911C /* Constants.swift */; };
-		4B4218BF2BE3DDBA001B911C /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218BE2BE3DDBA001B911C /* NetworkErrors.swift */; };
-		4B4218C22BE3DE79001B911C /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218C12BE3DE79001B911C /* RealmManager.swift */; };
 		4B4218D22BE3E150001B911C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B4218D12BE3E150001B911C /* RealmSwift */; };
-		4B4218D42BE3E241001B911C /* UniversityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218D32BE3E241001B911C /* UniversityObject.swift */; };
+		4B4218DD2BE3E49D001B911C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218DB2BE3E49D001B911C /* NetworkClient.swift */; };
+		4B4218DE2BE3E49D001B911C /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218DC2BE3E49D001B911C /* NetworkErrors.swift */; };
+		4B4218E12BE3E4DC001B911C /* UniversityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218DF2BE3E4DC001B911C /* UniversityObject.swift */; };
+		4B4218E22BE3E4DC001B911C /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E02BE3E4DC001B911C /* RealmManager.swift */; };
+		4B4218E42BE3E4EF001B911C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E32BE3E4EF001B911C /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,11 +100,11 @@
 		4B42183D2BE3D4A6001B911C /* MainAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B42186E2BE3D4EF001B911C /* UniversityList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UniversityList.xcodeproj; path = ../UniversityList/UniversityList.xcodeproj; sourceTree = "<group>"; };
 		4B42189B2BE3D517001B911C /* UniversityDetails.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UniversityDetails.xcodeproj; path = ../UniversityDetails/UniversityDetails.xcodeproj; sourceTree = "<group>"; };
-		4B4218B52BE3DB7D001B911C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		4B4218BB2BE3DC3F001B911C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4B4218BE2BE3DDBA001B911C /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
-		4B4218C12BE3DE79001B911C /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		4B4218D32BE3E241001B911C /* UniversityObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityObject.swift; sourceTree = "<group>"; };
+		4B4218DB2BE3E49D001B911C /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		4B4218DC2BE3E49D001B911C /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		4B4218DF2BE3E4DC001B911C /* UniversityObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityObject.swift; sourceTree = "<group>"; };
+		4B4218E02BE3E4DC001B911C /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		4B4218E32BE3E4EF001B911C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,8 +218,8 @@
 		4B4218B42BE3DB45001B911C /* NetworkClient */ = {
 			isa = PBXGroup;
 			children = (
-				4B4218B52BE3DB7D001B911C /* NetworkClient.swift */,
-				4B4218BE2BE3DDBA001B911C /* NetworkErrors.swift */,
+				4B4218DB2BE3E49D001B911C /* NetworkClient.swift */,
+				4B4218DC2BE3E49D001B911C /* NetworkErrors.swift */,
 			);
 			path = NetworkClient;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 		4B4218BA2BE3DC2B001B911C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4B4218BB2BE3DC3F001B911C /* Constants.swift */,
+				4B4218E32BE3E4EF001B911C /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -235,8 +235,8 @@
 		4B4218C02BE3DE62001B911C /* RealmManager */ = {
 			isa = PBXGroup;
 			children = (
-				4B4218C12BE3DE79001B911C /* RealmManager.swift */,
-				4B4218D32BE3E241001B911C /* UniversityObject.swift */,
+				4B4218E02BE3E4DC001B911C /* RealmManager.swift */,
+				4B4218DF2BE3E4DC001B911C /* UniversityObject.swift */,
 			);
 			path = RealmManager;
 			sourceTree = "<group>";
@@ -421,11 +421,11 @@
 			files = (
 				4B42181F2BE3D4A5001B911C /* ViewController.swift in Sources */,
 				4B42181B2BE3D4A5001B911C /* AppDelegate.swift in Sources */,
-				4B4218BF2BE3DDBA001B911C /* NetworkErrors.swift in Sources */,
-				4B4218B62BE3DB7D001B911C /* NetworkClient.swift in Sources */,
-				4B4218BC2BE3DC3F001B911C /* Constants.swift in Sources */,
-				4B4218D42BE3E241001B911C /* UniversityObject.swift in Sources */,
-				4B4218C22BE3DE79001B911C /* RealmManager.swift in Sources */,
+				4B4218E12BE3E4DC001B911C /* UniversityObject.swift in Sources */,
+				4B4218E22BE3E4DC001B911C /* RealmManager.swift in Sources */,
+				4B4218DD2BE3E49D001B911C /* NetworkClient.swift in Sources */,
+				4B4218DE2BE3E49D001B911C /* NetworkErrors.swift in Sources */,
+				4B4218E42BE3E4EF001B911C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
