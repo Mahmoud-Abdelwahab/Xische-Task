@@ -10,18 +10,17 @@ import UniversityList
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
-      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-         
-          window = UIWindow(frame: UIScreen.main.bounds)
-          let universityApiService = UniversityApiSevice.shared
-          let realmManager = RealmManager.shared
-          let vc = UniversityListRouter.assembleModule(universityApiService: universityApiService, realmManager: realmManager)
-          window?.rootViewController = UINavigationController(rootViewController: vc)
-          window?.makeKeyAndVisible()
-          return true
-      }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupNavigationRouter()
+        return true
+    }
+    
+    private func setupNavigationRouter() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        AppRouter.start(window: window)
+    }
 }
 

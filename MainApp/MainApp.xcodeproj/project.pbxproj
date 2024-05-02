@@ -24,6 +24,7 @@
 		4B4218E12BE3E4DC001B911C /* UniversityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218DF2BE3E4DC001B911C /* UniversityObject.swift */; };
 		4B4218E22BE3E4DC001B911C /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E02BE3E4DC001B911C /* RealmManager.swift */; };
 		4B4218E42BE3E4EF001B911C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E32BE3E4EF001B911C /* Constants.swift */; };
+		4B4219012BE4460F001B911C /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219002BE4460F001B911C /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		4B4218DF2BE3E4DC001B911C /* UniversityObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityObject.swift; sourceTree = "<group>"; };
 		4B4218E02BE3E4DC001B911C /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		4B4218E32BE3E4EF001B911C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4B4219002BE4460F001B911C /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,9 +163,10 @@
 		4B4218192BE3D4A5001B911C /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
+				4B4218B42BE3DB45001B911C /* ApiService */,
 				4B4218C02BE3DE62001B911C /* RealmManager */,
 				4B4218BA2BE3DC2B001B911C /* Helper */,
-				4B4218B42BE3DB45001B911C /* ApiService */,
+				4B4219002BE4460F001B911C /* AppRouter.swift */,
 				4B42181A2BE3D4A5001B911C /* AppDelegate.swift */,
 				4B42181E2BE3D4A5001B911C /* ViewController.swift */,
 				4B4218232BE3D4A6001B911C /* Assets.xcassets */,
@@ -423,6 +426,7 @@
 				4B42181B2BE3D4A5001B911C /* AppDelegate.swift in Sources */,
 				4B4218E12BE3E4DC001B911C /* UniversityObject.swift in Sources */,
 				4B4218E22BE3E4DC001B911C /* RealmManager.swift in Sources */,
+				4B4219012BE4460F001B911C /* AppRouter.swift in Sources */,
 				4B4218DD2BE3E49D001B911C /* UniversityApiSevice.swift in Sources */,
 				4B4218DE2BE3E49D001B911C /* NetworkErrors.swift in Sources */,
 				4B4218E42BE3E4EF001B911C /* Constants.swift in Sources */,
