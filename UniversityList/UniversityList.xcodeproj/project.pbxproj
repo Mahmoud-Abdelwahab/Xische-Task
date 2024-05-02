@@ -11,6 +11,8 @@
 		4B42185F2BE3D4EF001B911C /* UniversityList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4218542BE3D4EF001B911C /* UniversityList.framework */; };
 		4B4218642BE3D4EF001B911C /* UniversityListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218632BE3D4EF001B911C /* UniversityListTests.swift */; };
 		4B4218652BE3D4EF001B911C /* UniversityList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B4218572BE3D4EF001B911C /* UniversityList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B4218B22BE3D810001B911C /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218B02BE3D810001B911C /* UniversityListViewController.swift */; };
+		4B4218B32BE3D810001B911C /* UniversityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4218B12BE3D810001B911C /* UniversityListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		4B4218582BE3D4EF001B911C /* UniversityList.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UniversityList.docc; sourceTree = "<group>"; };
 		4B42185E2BE3D4EF001B911C /* UniversityListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversityListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4218632BE3D4EF001B911C /* UniversityListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListTests.swift; sourceTree = "<group>"; };
+		4B4218B02BE3D810001B911C /* UniversityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
+		4B4218B12BE3D810001B911C /* UniversityListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		4B4218562BE3D4EF001B911C /* UniversityList */ = {
 			isa = PBXGroup;
 			children = (
+				4B4218AF2BE3D7EB001B911C /* View */,
 				4B4218572BE3D4EF001B911C /* UniversityList.h */,
 				4B4218582BE3D4EF001B911C /* UniversityList.docc */,
 			);
@@ -83,6 +88,15 @@
 				4B4218632BE3D4EF001B911C /* UniversityListTests.swift */,
 			);
 			path = UniversityListTests;
+			sourceTree = "<group>";
+		};
+		4B4218AF2BE3D7EB001B911C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218B02BE3D810001B911C /* UniversityListViewController.swift */,
+				4B4218B12BE3D810001B911C /* UniversityListViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4218B32BE3D810001B911C /* UniversityListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4218B22BE3D810001B911C /* UniversityListViewController.swift in Sources */,
 				4B4218592BE3D4EF001B911C /* UniversityList.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +423,7 @@
 		4B42186C2BE3D4EF001B911C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PMW98A49XJ;
@@ -423,6 +440,7 @@
 		4B42186D2BE3D4EF001B911C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PMW98A49XJ;
