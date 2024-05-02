@@ -69,7 +69,8 @@ extension UniversityListViewController {
     private func configureTableView() {
         universityTableView.delegate = self
         universityTableView.dataSource = self
-        universityTableView.register(UINib(nibName: "UniversityTableViewCell", bundle: nil), forCellReuseIdentifier: "UniversityTableViewCell")
+        let frameworkBundle = Bundle(for: type(of: self))
+        universityTableView.register(UINib(nibName: "UniversityTableViewCell", bundle: frameworkBundle), forCellReuseIdentifier: "UniversityTableViewCell")
 
     }
 }

@@ -47,7 +47,7 @@ extension  UniversityRepository {
        let universityCellViewModel =  response.map {
             $0.toUniversityCellVM()
         }
-        self.saveUniversitiesToRealm(universityCellViewModel)
+      //  self.saveUniversitiesToRealm(universityCellViewModel)
         return universityCellViewModel
     }
     
