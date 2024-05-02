@@ -38,7 +38,7 @@ protocol UniversityListInteractorOutputProtocol: AnyObject {
 }
 
 // MARK: - Router
-protocol UniversityListRouterProtocol {
+public protocol UniversityListRouterProtocol {
     func showAlert(with message: String)
 }
 

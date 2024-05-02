@@ -50,13 +50,20 @@ extension UniversityListPresenter: UniversityListPresenterProtocol {
 extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
 
     func universitiesFetched(_ universities: [UniversityCellVM]) {
-        view?.hideLoader()
-        cellVMs = universities
-        view?.displayUniversities()
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.view?.hideLoader()
+            self.cellVMs = universities
+            self.view?.displayUniversities()
+        }
+       
     }
     
     func fetchFailed(with error: Error) {
-        view?.hideLoader()
-        router.showAlert(with: error.localizedDescription)
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.view?.hideLoader()
+            self.router.showAlert(with: error.localizedDescription)
+        }
     }
 }

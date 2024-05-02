@@ -11,10 +11,13 @@ import UniversityList
 public class UniversityApiSevice: UniversityApiSeviceProtocol {
     private let urlSession: URLSession
     private let baseURL = "\(Constants.baseURL)/search?country=United Arab Emirates"
+
+    public static let shared = UniversityApiSevice()
     
-    public init() {
+    private init() {
         self.urlSession = URLSession.shared
     }
+    
     
     public func fetchUniversities(completion: @escaping (Result<[UniversityList.UniversityResponse], Error>) -> Void) {
         guard let url = URL(string: baseURL) else {

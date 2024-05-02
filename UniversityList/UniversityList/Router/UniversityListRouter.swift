@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UniversityListRouter {
+public class UniversityListRouter {
     // MARK: - Attributes
     weak var viewController: UIViewController?
 }
@@ -15,7 +15,7 @@ class UniversityListRouter {
 extension UniversityListRouter: UniversityListRouterProtocol {
     
     // MARK: - Methods
-    static func assembleModule(universityApiService: UniversityApiSeviceProtocol,
+    public static func assembleModule(universityApiService: UniversityApiSeviceProtocol,
                                realmManager: UniversityCachingProtocol) -> UIViewController {
         let view = UniversityListViewController()
         let repository = UniversityRepository(universityApiSevice: universityApiService, realm: realmManager)
@@ -31,7 +31,7 @@ extension UniversityListRouter: UniversityListRouterProtocol {
     
     // MARK: - Navigation
     
-     func showAlert(with message: String) {
+    public func showAlert(with message: String) {
         let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         viewController?.present(alertController, animated: true, completion: nil)
