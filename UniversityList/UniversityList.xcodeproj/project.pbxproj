@@ -14,6 +14,10 @@
 		4B4218B22BE3D810001B911C /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218B02BE3D810001B911C /* UniversityListViewController.swift */; };
 		4B4218B32BE3D810001B911C /* UniversityListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4218B12BE3D810001B911C /* UniversityListViewController.xib */; };
 		4B4218B92BE3DBC2001B911C /* UniversityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218B82BE3DBC2001B911C /* UniversityResponse.swift */; };
+		4B4218E72BE3E62A001B911C /* UniversityListingProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E62BE3E62A001B911C /* UniversityListingProtocols.swift */; };
+		4B4218E92BE3E674001B911C /* UniversityCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E82BE3E674001B911C /* UniversityCellVM.swift */; };
+		4B4218ED2BE3E6F4001B911C /* UniversityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218EB2BE3E6F4001B911C /* UniversityTableViewCell.swift */; };
+		4B4218EE2BE3E6F4001B911C /* UniversityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B4218EC2BE3E6F4001B911C /* UniversityTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,10 @@
 		4B4218B02BE3D810001B911C /* UniversityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
 		4B4218B12BE3D810001B911C /* UniversityListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityListViewController.xib; sourceTree = "<group>"; };
 		4B4218B82BE3DBC2001B911C /* UniversityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityResponse.swift; sourceTree = "<group>"; };
+		4B4218E62BE3E62A001B911C /* UniversityListingProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListingProtocols.swift; sourceTree = "<group>"; };
+		4B4218E82BE3E674001B911C /* UniversityCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCellVM.swift; sourceTree = "<group>"; };
+		4B4218EB2BE3E6F4001B911C /* UniversityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityTableViewCell.swift; sourceTree = "<group>"; };
+		4B4218EC2BE3E6F4001B911C /* UniversityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UniversityTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		4B4218562BE3D4EF001B911C /* UniversityList */ = {
 			isa = PBXGroup;
 			children = (
+				4B4218E52BE3E606001B911C /* Contract */,
 				4B4218B72BE3DB97001B911C /* Models */,
 				4B4218AF2BE3D7EB001B911C /* View */,
 				4B4218572BE3D4EF001B911C /* UniversityList.h */,
@@ -96,6 +105,7 @@
 		4B4218AF2BE3D7EB001B911C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4B4218EA2BE3E6D9001B911C /* UniversityCell */,
 				4B4218B02BE3D810001B911C /* UniversityListViewController.swift */,
 				4B4218B12BE3D810001B911C /* UniversityListViewController.xib */,
 			);
@@ -106,8 +116,26 @@
 			isa = PBXGroup;
 			children = (
 				4B4218B82BE3DBC2001B911C /* UniversityResponse.swift */,
+				4B4218E82BE3E674001B911C /* UniversityCellVM.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4B4218E52BE3E606001B911C /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218E62BE3E62A001B911C /* UniversityListingProtocols.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		4B4218EA2BE3E6D9001B911C /* UniversityCell */ = {
+			isa = PBXGroup;
+			children = (
+				4B4218EB2BE3E6F4001B911C /* UniversityTableViewCell.swift */,
+				4B4218EC2BE3E6F4001B911C /* UniversityTableViewCell.xib */,
+			);
+			path = UniversityCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4218B32BE3D810001B911C /* UniversityListViewController.xib in Resources */,
+				4B4218EE2BE3E6F4001B911C /* UniversityTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4218E72BE3E62A001B911C /* UniversityListingProtocols.swift in Sources */,
+				4B4218ED2BE3E6F4001B911C /* UniversityTableViewCell.swift in Sources */,
+				4B4218E92BE3E674001B911C /* UniversityCellVM.swift in Sources */,
 				4B4218B92BE3DBC2001B911C /* UniversityResponse.swift in Sources */,
 				4B4218B22BE3D810001B911C /* UniversityListViewController.swift in Sources */,
 				4B4218592BE3D4EF001B911C /* UniversityList.docc in Sources */,

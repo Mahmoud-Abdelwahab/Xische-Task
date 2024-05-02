@@ -7,23 +7,36 @@
 
 import UIKit
 
- public class UniversityListViewController: UIViewController {
+public class UniversityListViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var universityTableView: UITableView!
+    
+    // MARK: - Attributes
+    var presenter: UniversityListPresenterProtocol!
+
+    // MARK: - Life Cycle
     public override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
-        // Do any additional setup after loading the view.
+    
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Deallocation
+    deinit {
+        debugPrint("\(UniversityListViewController.self)  released from memory 🧨")
     }
-    */
+    
+}
 
+
+extension UniversityListViewController: UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter.numberOfRows()
+    }
+
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "UniversityTableViewCell") as?  UniversityTableViewCell else { return UITableViewCell()}
+        presenter.configureCell(cell, indexPath)
+        return cell
+    }
 }
