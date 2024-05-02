@@ -10,7 +10,6 @@ import Foundation
 
 // MARK: - View
 protocol UniversityListViewProtocol: AnyObject {
-//    func displayError(_ errorMessage: String)
     func displayUniversities()
     func showLoader()
     func hideLoader()
@@ -27,11 +26,12 @@ protocol UniversityListPresenterProtocol {
     func configureCell(_ cell: UniversityTableViewCellProtocol,_ indexPath: IndexPath)
 }
 
-// MARK: - Interactor
+// MARK: - Interactor Input
 protocol UniversityListInteractorInputProtocol {
     func fetchUniversities()
 }
 
+// MARK: - Interactor Output
 protocol UniversityListInteractorOutputProtocol: AnyObject {
     func universitiesFetched(_ universities: [UniversityCellVM])
     func fetchFailed(with error: Error)
