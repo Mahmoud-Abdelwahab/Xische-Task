@@ -23,6 +23,8 @@
 		4B4218F92BE3F936001B911C /* UniversityListInteractore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218F82BE3F936001B911C /* UniversityListInteractore.swift */; };
 		4B4218FC2BE40D96001B911C /* UniversityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218FB2BE40D96001B911C /* UniversityRepository.swift */; };
 		4B4218FF2BE41255001B911C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218FE2BE41255001B911C /* Reachability.swift */; };
+		4B4219262BE556EE001B911C /* UniversityListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219252BE556EE001B911C /* UniversityListInteractorTests.swift */; };
+		4B4219282BE5765E001B911C /* UniversityRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219272BE5765E001B911C /* UniversityRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4B4218F82BE3F936001B911C /* UniversityListInteractore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListInteractore.swift; sourceTree = "<group>"; };
 		4B4218FB2BE40D96001B911C /* UniversityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRepository.swift; sourceTree = "<group>"; };
 		4B4218FE2BE41255001B911C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		4B4219252BE556EE001B911C /* UniversityListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListInteractorTests.swift; sourceTree = "<group>"; };
+		4B4219272BE5765E001B911C /* UniversityRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,13 +100,13 @@
 		4B4218562BE3D4EF001B911C /* UniversityList */ = {
 			isa = PBXGroup;
 			children = (
-				4B4218FA2BE3F968001B911C /* Repository */,
 				4B4218AF2BE3D7EB001B911C /* View */,
 				4B4218F42BE3F8DE001B911C /* Presenter */,
 				4B4218F72BE3F91E001B911C /* Interactor */,
 				4B4218F12BE3F8A7001B911C /* Router */,
 				4B4218E52BE3E606001B911C /* Contract */,
 				4B4218B72BE3DB97001B911C /* Models */,
+				4B4218FA2BE3F968001B911C /* Repository */,
 				4B4218572BE3D4EF001B911C /* UniversityList.h */,
 				4B4218582BE3D4EF001B911C /* UniversityList.docc */,
 			);
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				4B4218632BE3D4EF001B911C /* UniversityListTests.swift */,
+				4B4219252BE556EE001B911C /* UniversityListInteractorTests.swift */,
+				4B4219272BE5765E001B911C /* UniversityRepositoryTests.swift */,
 			);
 			path = UniversityListTests;
 			sourceTree = "<group>";
@@ -322,7 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4219262BE556EE001B911C /* UniversityListInteractorTests.swift in Sources */,
 				4B4218642BE3D4EF001B911C /* UniversityListTests.swift in Sources */,
+				4B4219282BE5765E001B911C /* UniversityRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
