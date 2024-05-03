@@ -39,12 +39,13 @@ class UniversityDetailsViewController: UIViewController {
 
     // MARK: - Action
     @IBAction func didTapRefreshListButton(_ sender: UIButton) {
-        
+        presenter.refreshButtonTapped()
     }
     
     @IBAction func didTapWebLinkButton(_ sender: Any) {
-        
+        presenter.webPageTapped()
     }
+    
     // MARK: - Deallocation
     deinit {
         debugPrint("\(UniversityDetailsViewController.self)  released from memory 🧨")
