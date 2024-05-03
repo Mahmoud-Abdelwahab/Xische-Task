@@ -67,3 +67,10 @@ extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
         }
     }
 }
+
+// MARK: - Refresh list screen delegate
+extension UniversityListPresenter: RefreshScreenActionDelegate {
+    func didTapRefreshScreenAction() {
+        viewDidLoad()
+    }
+}

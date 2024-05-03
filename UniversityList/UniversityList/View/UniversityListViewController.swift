@@ -34,10 +34,6 @@ public class UniversityListViewController: UIViewController {
         presenter.viewDidLoad()
     }
     
-    public func refreshScreen() {
-        presenter.viewDidLoad()
-    }
-    
     // MARK: - Deallocation
     deinit {
         debugPrint("\(UniversityListViewController.self)  released from memory 🧨")

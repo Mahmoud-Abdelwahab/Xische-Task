@@ -1,5 +1,5 @@
 //
-//  AppRouter.swift
+//  MainAppRouter.swift
 //  MainApp
 //
 //  Created by Mahmoud Abdelwahab on 03/05/2024.
@@ -9,10 +9,11 @@ import UIKit
 import UniversityList
 import UniversityDetails
 
-public class AppRouter {
+public class MainAppRouter {
     
-    static var shared = AppRouter()
+    static var shared = MainAppRouter()
     private var navigationController: UINavigationController
+    weak var delegate: RefreshScreenActionDelegate?
     
     private init() {
         self.navigationController = UINavigationController()
@@ -24,7 +25,7 @@ public class AppRouter {
         }
         let universityApiService = UniversityApiSevice.shared
         let realmManager = RealmManager.shared
-        let initialViewController = UniversityListRouter.assembleModule(universityApiService: universityApiService, realmManager: realmManager, mainAppRouter: self)
+        let initialViewController = UniversityListRouter.assembleModule(universityApiService: universityApiService, realmManager: realmManager, mainAppRouter: self, delegate: &delegate)
         
         navigationController.viewControllers = [initialViewController]
         window.rootViewController = navigationController
@@ -35,7 +36,7 @@ public class AppRouter {
 
 // MARK: - University List Navigation
 
-extension AppRouter : UniversityListRouterProtocol {
+extension MainAppRouter : UniversityListRouterProtocol {
     
     public func showAlert(with message: String) {
         let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
@@ -49,7 +50,7 @@ extension AppRouter : UniversityListRouterProtocol {
         let view = UniversityDetailsRouter.assembleModule(universityDetailsModel: model) { [weak self] in
             guard let self else { return}
             let listViewContoller = self.navigationController.viewControllers.first as? UniversityListViewController
-            listViewContoller?.refreshScreen()
+            delegate?.didTapRefreshScreenAction()
         }
         navigationController.present(view, animated: true)
     }

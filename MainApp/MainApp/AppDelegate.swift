@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupNavigationRouter() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        AppRouter.shared.start(window: window)
+        MainAppRouter.shared.start(window: window)
     }
 }
 

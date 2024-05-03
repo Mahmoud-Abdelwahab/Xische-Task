@@ -22,12 +22,14 @@ extension UniversityListRouter: UniversityListRouterProtocol {
     // MARK: - Methods
     public static func assembleModule(universityApiService: UniversityApiSeviceProtocol,
                                       realmManager: UniversityCachingProtocol,
-                                      mainAppRouter: UniversityListRouterProtocol) -> UIViewController {
+                                      mainAppRouter: UniversityListRouterProtocol,
+                                      delegate: inout RefreshScreenActionDelegate?) -> UIViewController {
         let view = UniversityListViewController()
         let repository = UniversityRepository(universityApiSevice: universityApiService, realm: realmManager)
         let interactor = UniversityListInteractore(universityRepository: repository)
         let router = UniversityListRouter(mainAppRouter: mainAppRouter)
         let presenter = UniversityListPresenter(view: view, interactor: interactor, router: router)
+        delegate = presenter
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
