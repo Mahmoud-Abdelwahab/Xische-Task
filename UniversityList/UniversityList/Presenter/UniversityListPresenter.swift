@@ -42,7 +42,7 @@ extension UniversityListPresenter: UniversityListPresenterProtocol {
     
     func didSelect(_ universityIndex: IndexPath) {
         let cellModel = cellVMs[universityIndex.row]
-        print("🚀", cellModel)
+        router.navigateToDetailsScreen(with: cellModel)
     }
 }
 
