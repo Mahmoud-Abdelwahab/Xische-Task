@@ -96,13 +96,13 @@
 		4B4218562BE3D4EF001B911C /* UniversityList */ = {
 			isa = PBXGroup;
 			children = (
-				4B4218FA2BE3F968001B911C /* Repository */,
 				4B4218AF2BE3D7EB001B911C /* View */,
 				4B4218F42BE3F8DE001B911C /* Presenter */,
 				4B4218F72BE3F91E001B911C /* Interactor */,
 				4B4218F12BE3F8A7001B911C /* Router */,
 				4B4218E52BE3E606001B911C /* Contract */,
 				4B4218B72BE3DB97001B911C /* Models */,
+				4B4218FA2BE3F968001B911C /* Repository */,
 				4B4218572BE3D4EF001B911C /* UniversityList.h */,
 				4B4218582BE3D4EF001B911C /* UniversityList.docc */,
 			);
