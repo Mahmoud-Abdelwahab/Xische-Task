@@ -8,7 +8,7 @@
 import UIKit
 
 class UniversityDetailsViewController: UIViewController {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var webPageLinkButton: UIButton!
     @IBOutlet weak var countryCodeLabel: UILabel!
@@ -24,7 +24,7 @@ class UniversityDetailsViewController: UIViewController {
         let frameworkBundle = Bundle(for: type(of: self))
         super.init(nibName: nil, bundle: frameworkBundle)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -35,8 +35,8 @@ class UniversityDetailsViewController: UIViewController {
         configureViewContoller()
         presenter.viewDidLoad()
     }
-
-
+    
+    
     // MARK: - Action
     @IBAction func didTapRefreshListButton(_ sender: UIButton) {
         presenter.refreshButtonTapped()

@@ -36,6 +36,6 @@ extension UniversityDetailsRouter: UniversityDetailsRouterProtocol {
     }
     
     public func openSafariBrowser(with webPageUrl: URL) {
-         UIApplication.shared.open(webPageUrl)
+        UIApplication.shared.open(webPageUrl)
     }
 }

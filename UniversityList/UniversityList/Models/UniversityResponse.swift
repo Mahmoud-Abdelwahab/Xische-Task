@@ -15,9 +15,9 @@ public struct UniversityResponse: Decodable {
     public let country: String
     
     private enum CodingKeys: String, CodingKey {
-           case name, webPages, alphaTwoCode, country
-           case stateProvince = "state-province"
-       }
+        case name, webPages, alphaTwoCode, country
+        case stateProvince = "state-province"
+    }
 }
 
 extension UniversityResponse {

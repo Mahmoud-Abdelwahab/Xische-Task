@@ -11,17 +11,17 @@ public class UniversityListRouter {
     // MARK: - Attributes
     weak var viewController: UIViewController?
     weak var mainAppRouter: UniversityListRouterProtocol? // Add a property to store the main app's router
-      
-      init(mainAppRouter: UniversityListRouterProtocol) {
-          self.mainAppRouter = mainAppRouter
-      }
+    
+    init(mainAppRouter: UniversityListRouterProtocol) {
+        self.mainAppRouter = mainAppRouter
+    }
 }
 
 extension UniversityListRouter: UniversityListRouterProtocol {
     
     // MARK: - Methods
     public static func assembleModule(universityApiService: UniversityApiSeviceProtocol,
-                               realmManager: UniversityCachingProtocol,
+                                      realmManager: UniversityCachingProtocol,
                                       mainAppRouter: UniversityListRouterProtocol) -> UIViewController {
         let view = UniversityListViewController()
         let repository = UniversityRepository(universityApiSevice: universityApiService, realm: realmManager)

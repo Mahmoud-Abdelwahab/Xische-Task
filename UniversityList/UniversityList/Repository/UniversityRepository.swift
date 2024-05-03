@@ -44,7 +44,7 @@ extension  UniversityRepository: UniversityRepositoryProtocol{
 //MARK: - Private Handlers
 extension  UniversityRepository {
     private func mapToViewModel(response: [UniversityResponse])-> [UniversityCellVM] {
-       let universityCellViewModel =  response.map {
+        let universityCellViewModel =  response.map {
             $0.toUniversityCellVM()
         }
         self.saveUniversitiesToRealm(universityCellViewModel)
@@ -58,7 +58,7 @@ extension  UniversityRepository {
             debugPrint(error)
         }
     }
- 
+    
     private func fetchUniversitiesFromRealm() -> [UniversityCellVM]? {
         realm.fetchUniversitiesFromRealmDB()
     }

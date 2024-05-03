@@ -48,7 +48,7 @@ extension UniversityListPresenter: UniversityListPresenterProtocol {
 
 // MARK: - Interactore To Presenter
 extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
-
+    
     func universitiesFetched(_ universities: [UniversityCellVM]) {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
@@ -56,7 +56,7 @@ extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
             self.cellVMs = universities
             self.view?.displayUniversities()
         }
-       
+        
     }
     
     func fetchFailed(with error: Error) {

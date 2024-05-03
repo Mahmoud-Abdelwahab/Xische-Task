@@ -11,7 +11,7 @@ import UniversityList
 public class UniversityApiSevice: UniversityApiSeviceProtocol {
     private let urlSession: URLSession
     private let baseURL = "\(Constants.baseURL)/search?country=United Arab Emirates"
-
+    
     public static let shared = UniversityApiSevice()
     
     private init() {
