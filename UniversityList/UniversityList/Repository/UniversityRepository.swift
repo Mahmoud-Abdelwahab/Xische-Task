@@ -22,22 +22,36 @@ class UniversityRepository {
 extension  UniversityRepository: UniversityRepositoryProtocol{
     func fetchUniversities(completion: @escaping (FetchedResult) -> Void) {
         if Reachability.shared.isConnectedToNetwork() {
-            universityApiSevice.fetchUniversities { result  in
-                switch result {
-                case .success(let response):
-                    let universityCellViewModel = self.mapToViewModel(response: response)
-                    completion(.success(universityCellViewModel))
-                case .failure(let error):
-                    completion(.failure(error))
+            universityApiSevice.fetchUniversities { [weak self] result  in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let response):
+                        self.handleSuccess(completion: completion, response: response)
+                    case .failure(let error):
+                        self.handleNetworkFailure(completion: completion, error: error)
+                    }
                 }
             }
         } else {
-            guard let universities = fetchUniversitiesFromRealm(), !universities.isEmpty else {
-                completion(.failure(NSError(domain: "❌ No Internet and No cached data ❌", code: 0, userInfo: nil)))
-                return
+            DispatchQueue.main.async {
+                let error = NSError(domain: "❌ No Internet and No cached data ❌", code: 0, userInfo: nil)
+                self.handleNetworkFailure(completion: completion, error: error)
             }
-            completion(.success(universities))
         }
+    }
+    
+    private func handleSuccess(completion: @escaping (FetchedResult) -> Void, response: [UniversityResponse]) {
+        let universityCellViewModel = self.mapToViewModel(response: response)
+        completion(.success(universityCellViewModel))
+    }
+    
+    private func handleNetworkFailure(completion: @escaping (FetchedResult) -> Void, error: Error) {
+        guard let universities = self.fetchUniversitiesFromRealm(), !universities.isEmpty else {
+            completion(.failure(error))
+            return
+        }
+        completion(.success(universities))
     }
 }
 

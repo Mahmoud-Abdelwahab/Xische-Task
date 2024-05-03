@@ -3,4 +3,132 @@
    uuid = "C69C9CCE-2B9A-4A2F-AC6E-B3FB69888824"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46F1D4D6-D8C3-4230-83C0-E0BCB8F831E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UniversityList/UniversityList/Repository/UniversityRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "handleNetworkFailure(completion:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "46F1D4D6-D8C3-4230-83C0-E0BCB8F831E4 - c5d65b9002f3381e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UniversityList.UniversityRepository.handleNetworkFailure(completion: (Swift.Result&lt;Swift.Array&lt;UniversityList.UniversityCellVM&gt;, Swift.Error&gt;) -&gt; (), error: Swift.Error) -&gt; ()"
+                  moduleName = "UniversityList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/XschieTask/UniversityList/UniversityList/Repository/UniversityRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "46F1D4D6-D8C3-4230-83C0-E0BCB8F831E4 - c5d65b9002f3385c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UniversityList.UniversityRepository.handleNetworkFailure(completion: (Swift.Result&lt;Swift.Array&lt;UniversityList.UniversityCellVM&gt;, Swift.Error&gt;) -&gt; (), error: Swift.Error) -&gt; ()"
+                  moduleName = "UniversityList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/XschieTask/UniversityList/UniversityList/Repository/UniversityRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "46F1D4D6-D8C3-4230-83C0-E0BCB8F831E4 - c5d65b9002f3385c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UniversityList.UniversityRepository.handleNetworkFailure(completion: (Swift.Result&lt;Swift.Array&lt;UniversityList.UniversityCellVM&gt;, Swift.Error&gt;) -&gt; (), error: Swift.Error) -&gt; ()"
+                  moduleName = "UniversityList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/XschieTask/UniversityList/UniversityList/Repository/UniversityRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "348">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59048DF4-760C-4B48-91E2-A535201AB4EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UniversityList/UniversityList/Repository/UniversityRepository.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "handleNetworkFailure(completion:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "59048DF4-760C-4B48-91E2-A535201AB4EA - c5d65b9002f3381e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UniversityList.UniversityRepository.handleNetworkFailure(completion: (Swift.Result&lt;Swift.Array&lt;UniversityList.UniversityCellVM&gt;, Swift.Error&gt;) -&gt; (), error: Swift.Error) -&gt; ()"
+                  moduleName = "UniversityList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/XschieTask/UniversityList/UniversityList/Repository/UniversityRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "59048DF4-760C-4B48-91E2-A535201AB4EA - c5d65b9002f3383d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UniversityList.UniversityRepository.handleNetworkFailure(completion: (Swift.Result&lt;Swift.Array&lt;UniversityList.UniversityCellVM&gt;, Swift.Error&gt;) -&gt; (), error: Swift.Error) -&gt; ()"
+                  moduleName = "UniversityList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/XschieTask/UniversityList/UniversityList/Repository/UniversityRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "59048DF4-760C-4B48-91E2-A535201AB4EA - c5d65b9002f3383d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UniversityList.UniversityRepository.handleNetworkFailure(completion: (Swift.Result&lt;Swift.Array&lt;UniversityList.UniversityCellVM&gt;, Swift.Error&gt;) -&gt; (), error: Swift.Error) -&gt; ()"
+                  moduleName = "UniversityList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mahmoudabdelwahab/Desktop/XschieTask/UniversityList/UniversityList/Repository/UniversityRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
