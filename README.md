@@ -27,9 +27,11 @@ The application follows the VIPER architecture to ensure modularity, separation 
 - Network requests handled using URLSession.
 - Offline support by retrieving data from local cache in case of API failure.
 - Simple UI design to focus on functionality.
+- added some unite tests
 
 # Requirements
-- Xcode 15.0.1 
+- Xcode 15.0.1
+- XCode instruments leak tool
 - UIKit framework
 - RealmSwift framework
 
@@ -59,3 +61,4 @@ To run the application:
 - I used two different  ui models  for list and details to ensure separation of concerns 
 - Tried to apply solid  as much as i could 
 - Any module need to use realm or network service it needs to create protocol to use it throught protocols ... and realm manager, network service implements this protocol 
+- app free from memeory leaks i tested it using XCode instruments leak tool
