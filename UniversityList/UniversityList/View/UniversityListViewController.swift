@@ -33,6 +33,10 @@ public class UniversityListViewController: UIViewController {
         configureViewContoller()
         presenter.viewDidLoad()
     }
+    
+    public func refreshScreen() {
+       presenter.viewDidLoad()
+    }
 
     // MARK: - Deallocation
     deinit {

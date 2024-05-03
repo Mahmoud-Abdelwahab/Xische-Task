@@ -16,13 +16,14 @@ extension UniversityDetailsRouter: UniversityDetailsRouterProtocol {
     
     
     // MARK: - Methods
-    public static func assembleModule(universityDetailsModel: UniversityDetailsViewModel) -> UIViewController {
+    public static func assembleModule(universityDetailsModel: UniversityDetailsViewModel, refreshAction: @escaping () -> Void) -> UIViewController {
         let view = UniversityDetailsViewController()
         let router = UniversityDetailsRouter()
         let presenter = UniversityDetailsPresenter(view: view,
                                                    router: router,
-                                                   universityDetailsModel: universityDetailsModel)
+                                                   universityDetailsModel: universityDetailsModel, refreshAction: refreshAction)
         view.presenter = presenter
+        
         router.viewController = view
         
         return view

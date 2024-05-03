@@ -16,7 +16,8 @@ protocol UniversityDetailsViewProtocol: AnyObject {
 protocol UniversityDetailsPresenterProtocol {
     init(view: UniversityDetailsViewProtocol,
          router: UniversityDetailsRouterProtocol,
-         universityDetailsModel: UniversityDetailsViewModel)
+         universityDetailsModel: UniversityDetailsViewModel,
+         refreshAction: @escaping () -> Void)
     func viewDidLoad()
     func refreshButtonTapped()
     func webPageTapped()

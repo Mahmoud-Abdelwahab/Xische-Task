@@ -13,13 +13,16 @@ class UniversityDetailsPresenter {
     weak var view: UniversityDetailsViewProtocol!
     var router: UniversityDetailsRouterProtocol!
     var universityDetailsModel: UniversityDetailsViewModel
+    var refreshAction: (()->())?
     
     required init(view: UniversityDetailsViewProtocol,
                   router: UniversityDetailsRouterProtocol,
-                  universityDetailsModel: UniversityDetailsViewModel) {
+                  universityDetailsModel: UniversityDetailsViewModel,
+                  refreshAction: @escaping () -> Void) {
         self.view = view
         self.router = router
         self.universityDetailsModel = universityDetailsModel
+        self.refreshAction = refreshAction
     }
 }
 
@@ -30,7 +33,7 @@ extension UniversityDetailsPresenter: UniversityDetailsPresenterProtocol {
     }
     
     func refreshButtonTapped() {
-        
+        refreshAction?()
     }
     
     func webPageTapped() {

@@ -14,7 +14,7 @@ class UniversityListPresenter {
     let interactor: UniversityListInteractorInputProtocol
     let router: UniversityListRouterProtocol
     var cellVMs: [UniversityCellVM] = []
-  
+    
     required init(view: UniversityListViewProtocol,
                   interactor: UniversityListInteractorInputProtocol,
                   router: UniversityListRouterProtocol) {
