@@ -38,8 +38,9 @@ protocol UniversityListInteractorOutputProtocol: AnyObject {
 }
 
 // MARK: - Router
-public protocol UniversityListRouterProtocol {
+public protocol UniversityListRouterProtocol: AnyObject {
     func showAlert(with message: String)
+    func navigateToDetailsScreen(with model: UniversityCellVM)
 }
 
 // MARK: -  University Cell Protocol

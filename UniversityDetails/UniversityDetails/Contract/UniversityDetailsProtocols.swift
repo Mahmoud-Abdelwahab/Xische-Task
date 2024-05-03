@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UniversityList
 
 // MARK: - View
 protocol UniversityDetailsViewProtocol: AnyObject {

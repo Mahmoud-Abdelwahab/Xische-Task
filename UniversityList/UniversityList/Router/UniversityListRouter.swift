@@ -10,17 +10,23 @@ import UIKit
 public class UniversityListRouter {
     // MARK: - Attributes
     weak var viewController: UIViewController?
+    weak var mainAppRouter: UniversityListRouterProtocol? // Add a property to store the main app's router
+      
+      init(mainAppRouter: UniversityListRouterProtocol) {
+          self.mainAppRouter = mainAppRouter
+      }
 }
 
 extension UniversityListRouter: UniversityListRouterProtocol {
     
     // MARK: - Methods
     public static func assembleModule(universityApiService: UniversityApiSeviceProtocol,
-                               realmManager: UniversityCachingProtocol) -> UIViewController {
+                               realmManager: UniversityCachingProtocol,
+                                      mainAppRouter: UniversityListRouterProtocol) -> UIViewController {
         let view = UniversityListViewController()
         let repository = UniversityRepository(universityApiSevice: universityApiService, realm: realmManager)
         let interactor = UniversityListInteractore(universityRepository: repository)
-        let router = UniversityListRouter()
+        let router = UniversityListRouter(mainAppRouter: mainAppRouter)
         let presenter = UniversityListPresenter(view: view, interactor: interactor, router: router)
         view.presenter = presenter
         interactor.presenter = presenter
@@ -32,12 +38,10 @@ extension UniversityListRouter: UniversityListRouterProtocol {
     // MARK: - Navigation
     
     public func showAlert(with message: String) {
-        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        viewController?.present(alertController, animated: true, completion: nil)
+        mainAppRouter?.showAlert(with: message)
     }
     
-//    private func navigateToBack() {
-//        viewController?.navigationController?.popViewController(animated: true)
-//    }
+    public func navigateToDetailsScreen(with model: UniversityCellVM) {
+        mainAppRouter?.navigateToDetailsScreen(with: model)
+    }
 }
