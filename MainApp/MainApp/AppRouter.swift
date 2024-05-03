@@ -7,6 +7,7 @@
 
 import UIKit
 import UniversityList
+import UniversityDetails
 
 class AppRouter {
     static func start(window: UIWindow?) {
@@ -15,10 +16,13 @@ class AppRouter {
         }
         let universityApiService = UniversityApiSevice.shared
         let realmManager = RealmManager.shared
-        let initialViewController = UniversityListRouter.assembleModule(universityApiService: universityApiService, realmManager: realmManager)
+        let initialViewController = UniversityDetailsRouter.assembleModule(universityDetailsModel: UniversityDetailsViewModel(name: "Abu dahab", stateProvince: "aboooo", webPage: "https://github.com/Mahmoud-Abdelwahab/XschieTask", countryCode: "UAE", country: "United arab Emirate"))
+        //UniversityListRouter.assembleModule(universityApiService: universityApiService, realmManager: realmManager)
         
         let navigationController = UINavigationController(rootViewController: initialViewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 }
+
+

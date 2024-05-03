@@ -11,6 +11,12 @@
 		4B42188C2BE3D517001B911C /* UniversityDetails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4218812BE3D517001B911C /* UniversityDetails.framework */; };
 		4B4218912BE3D517001B911C /* UniversityDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218902BE3D517001B911C /* UniversityDetailsTests.swift */; };
 		4B4218922BE3D517001B911C /* UniversityDetails.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B4218842BE3D517001B911C /* UniversityDetails.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B42190B2BE4495D001B911C /* UniversityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219092BE4495D001B911C /* UniversityDetailsViewController.swift */; };
+		4B42190C2BE4495D001B911C /* UniversityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B42190A2BE4495D001B911C /* UniversityDetailsViewController.xib */; };
+		4B4219112BE486B7001B911C /* UniversityDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219102BE486B7001B911C /* UniversityDetailsRouter.swift */; };
+		4B4219132BE48735001B911C /* UniversityDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219122BE48735001B911C /* UniversityDetailsPresenter.swift */; };
+		4B4219152BE48765001B911C /* UniversityDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219142BE48765001B911C /* UniversityDetailsProtocols.swift */; };
+		4B4219182BE4896F001B911C /* UniversityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219172BE4896F001B911C /* UniversityDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,12 @@
 		4B4218852BE3D517001B911C /* UniversityDetails.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UniversityDetails.docc; sourceTree = "<group>"; };
 		4B42188B2BE3D517001B911C /* UniversityDetailsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversityDetailsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4218902BE3D517001B911C /* UniversityDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailsTests.swift; sourceTree = "<group>"; };
+		4B4219092BE4495D001B911C /* UniversityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailsViewController.swift; sourceTree = "<group>"; };
+		4B42190A2BE4495D001B911C /* UniversityDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityDetailsViewController.xib; sourceTree = "<group>"; };
+		4B4219102BE486B7001B911C /* UniversityDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailsRouter.swift; sourceTree = "<group>"; };
+		4B4219122BE48735001B911C /* UniversityDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailsPresenter.swift; sourceTree = "<group>"; };
+		4B4219142BE48765001B911C /* UniversityDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailsProtocols.swift; sourceTree = "<group>"; };
+		4B4219172BE4896F001B911C /* UniversityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,11 @@
 		4B4218832BE3D517001B911C /* UniversityDetails */ = {
 			isa = PBXGroup;
 			children = (
+				4B4219082BE4492A001B911C /* View */,
+				4B42190F2BE4868D001B911C /* Presenter */,
+				4B42190E2BE48684001B911C /* Router */,
+				4B4219162BE4892A001B911C /* Models */,
+				4B42190D2BE48670001B911C /* Contract */,
 				4B4218842BE3D517001B911C /* UniversityDetails.h */,
 				4B4218852BE3D517001B911C /* UniversityDetails.docc */,
 			);
@@ -83,6 +100,47 @@
 				4B4218902BE3D517001B911C /* UniversityDetailsTests.swift */,
 			);
 			path = UniversityDetailsTests;
+			sourceTree = "<group>";
+		};
+		4B4219082BE4492A001B911C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4B4219092BE4495D001B911C /* UniversityDetailsViewController.swift */,
+				4B42190A2BE4495D001B911C /* UniversityDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4B42190D2BE48670001B911C /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				4B4219142BE48765001B911C /* UniversityDetailsProtocols.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		4B42190E2BE48684001B911C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4B4219102BE486B7001B911C /* UniversityDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		4B42190F2BE4868D001B911C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4B4219122BE48735001B911C /* UniversityDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4B4219162BE4892A001B911C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B4219172BE4896F001B911C /* UniversityDetailsViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B42190C2BE4495D001B911C /* UniversityDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4219112BE486B7001B911C /* UniversityDetailsRouter.swift in Sources */,
 				4B4218862BE3D517001B911C /* UniversityDetails.docc in Sources */,
+				4B4219132BE48735001B911C /* UniversityDetailsPresenter.swift in Sources */,
+				4B4219152BE48765001B911C /* UniversityDetailsProtocols.swift in Sources */,
+				4B4219182BE4896F001B911C /* UniversityDetailsViewModel.swift in Sources */,
+				4B42190B2BE4495D001B911C /* UniversityDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +471,7 @@
 		4B4218992BE3D517001B911C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PMW98A49XJ;
@@ -423,6 +488,7 @@
 		4B42189A2BE3D517001B911C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PMW98A49XJ;

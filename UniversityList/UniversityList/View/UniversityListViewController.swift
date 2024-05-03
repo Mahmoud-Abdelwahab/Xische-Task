@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+// MARK: - Outlets
+// MARK: - Attributes
 public class UniversityListViewController: UIViewController {
 
     // MARK: - Outlets
