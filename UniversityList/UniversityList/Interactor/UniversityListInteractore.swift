@@ -10,10 +10,10 @@ import Foundation
 class UniversityListInteractore {
     weak var presenter: UniversityListInteractorOutputProtocol?
     var universityRepository: UniversityRepositoryProtocol
-       
-       init(universityRepository: UniversityRepositoryProtocol) {
-           self.universityRepository = universityRepository
-       }
+    
+    init(universityRepository: UniversityRepositoryProtocol) {
+        self.universityRepository = universityRepository
+    }
 }
 
 //MARK: - Input Methods

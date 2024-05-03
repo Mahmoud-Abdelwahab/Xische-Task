@@ -6,22 +6,23 @@
 //
 
 import UIKit
-
+// MARK: - Outlets
+// MARK: - Attributes
 public class UniversityListViewController: UIViewController {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var universityTableView: UITableView!
     @IBOutlet weak var activityIndicatore: UIActivityIndicatorView!
     
     // MARK: - Attributes
     var presenter: UniversityListPresenterProtocol!
-
+    
     // MARK: - Init
     public init() {
         let frameworkBundle = Bundle(for: type(of: self))
         super.init(nibName: nil, bundle: frameworkBundle)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -32,7 +33,7 @@ public class UniversityListViewController: UIViewController {
         configureViewContoller()
         presenter.viewDidLoad()
     }
-
+    
     // MARK: - Deallocation
     deinit {
         debugPrint("\(UniversityListViewController.self)  released from memory 🧨")
@@ -61,6 +62,7 @@ extension UniversityListViewController: UniversityListViewProtocol {
 extension UniversityListViewController {
     
     private func configureViewContoller() {
+        title = "UAE University List"
         view.backgroundColor = .systemBackground
         activityIndicatore.hidesWhenStopped = true
         configureTableView()
@@ -71,7 +73,7 @@ extension UniversityListViewController {
         universityTableView.dataSource = self
         let frameworkBundle = Bundle(for: type(of: self))
         universityTableView.register(UINib(nibName: "UniversityTableViewCell", bundle: frameworkBundle), forCellReuseIdentifier: "UniversityTableViewCell")
-
+        
     }
 }
 
@@ -80,7 +82,7 @@ extension UniversityListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         presenter.numberOfRows()
     }
-
+    
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UniversityTableViewCell") as?  UniversityTableViewCell else { return UITableViewCell()}
         cell.accessoryType = .disclosureIndicator
@@ -92,7 +94,7 @@ extension UniversityListViewController: UITableViewDataSource {
 // MARK: - TableView Delegate Method
 extension UniversityListViewController: UITableViewDelegate {
     
-   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       presenter.didSelect(indexPath)
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelect(indexPath)
     }
 }

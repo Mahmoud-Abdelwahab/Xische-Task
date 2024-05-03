@@ -14,7 +14,7 @@ class UniversityListPresenter {
     let interactor: UniversityListInteractorInputProtocol
     let router: UniversityListRouterProtocol
     var cellVMs: [UniversityCellVM] = []
-  
+    
     required init(view: UniversityListViewProtocol,
                   interactor: UniversityListInteractorInputProtocol,
                   router: UniversityListRouterProtocol) {
@@ -42,13 +42,13 @@ extension UniversityListPresenter: UniversityListPresenterProtocol {
     
     func didSelect(_ universityIndex: IndexPath) {
         let cellModel = cellVMs[universityIndex.row]
-        print("🚀", cellModel)
+        router.navigateToDetailsScreen(with: cellModel)
     }
 }
 
 // MARK: - Interactore To Presenter
 extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
-
+    
     func universitiesFetched(_ universities: [UniversityCellVM]) {
         DispatchQueue.main.async { [weak self] in
             guard let self else { return }
@@ -56,7 +56,7 @@ extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
             self.cellVMs = universities
             self.view?.displayUniversities()
         }
-       
+        
     }
     
     func fetchFailed(with error: Error) {
@@ -65,5 +65,12 @@ extension UniversityListPresenter: UniversityListInteractorOutputProtocol {
             self.view?.hideLoader()
             self.router.showAlert(with: error.localizedDescription)
         }
+    }
+}
+
+// MARK: - Refresh list screen delegate
+extension UniversityListPresenter: RefreshScreenActionDelegate {
+    func didTapRefreshScreenAction() {
+        viewDidLoad()
     }
 }

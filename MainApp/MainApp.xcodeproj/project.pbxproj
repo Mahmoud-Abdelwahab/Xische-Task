@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B42181B2BE3D4A5001B911C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42181A2BE3D4A5001B911C /* AppDelegate.swift */; };
-		4B42181F2BE3D4A5001B911C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B42181E2BE3D4A5001B911C /* ViewController.swift */; };
 		4B4218242BE3D4A6001B911C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B4218232BE3D4A6001B911C /* Assets.xcassets */; };
 		4B4218272BE3D4A6001B911C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B4218252BE3D4A6001B911C /* LaunchScreen.storyboard */; };
 		4B4218322BE3D4A6001B911C /* MainAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218312BE3D4A6001B911C /* MainAppTests.swift */; };
@@ -24,7 +23,7 @@
 		4B4218E12BE3E4DC001B911C /* UniversityObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218DF2BE3E4DC001B911C /* UniversityObject.swift */; };
 		4B4218E22BE3E4DC001B911C /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E02BE3E4DC001B911C /* RealmManager.swift */; };
 		4B4218E42BE3E4EF001B911C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4218E32BE3E4EF001B911C /* Constants.swift */; };
-		4B4219012BE4460F001B911C /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219002BE4460F001B911C /* AppRouter.swift */; };
+		4B4219012BE4460F001B911C /* MainAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4219002BE4460F001B911C /* MainAppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +89,6 @@
 /* Begin PBXFileReference section */
 		4B4218172BE3D4A5001B911C /* MainApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B42181A2BE3D4A5001B911C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B42181E2BE3D4A5001B911C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B4218232BE3D4A6001B911C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B4218262BE3D4A6001B911C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B4218282BE3D4A6001B911C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,7 +104,7 @@
 		4B4218DF2BE3E4DC001B911C /* UniversityObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityObject.swift; sourceTree = "<group>"; };
 		4B4218E02BE3E4DC001B911C /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		4B4218E32BE3E4EF001B911C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4B4219002BE4460F001B911C /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		4B4219002BE4460F001B911C /* MainAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,9 +164,8 @@
 				4B4218B42BE3DB45001B911C /* ApiService */,
 				4B4218C02BE3DE62001B911C /* RealmManager */,
 				4B4218BA2BE3DC2B001B911C /* Helper */,
-				4B4219002BE4460F001B911C /* AppRouter.swift */,
+				4B4219002BE4460F001B911C /* MainAppRouter.swift */,
 				4B42181A2BE3D4A5001B911C /* AppDelegate.swift */,
-				4B42181E2BE3D4A5001B911C /* ViewController.swift */,
 				4B4218232BE3D4A6001B911C /* Assets.xcassets */,
 				4B4218252BE3D4A6001B911C /* LaunchScreen.storyboard */,
 				4B4218282BE3D4A6001B911C /* Info.plist */,
@@ -422,11 +419,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B42181F2BE3D4A5001B911C /* ViewController.swift in Sources */,
 				4B42181B2BE3D4A5001B911C /* AppDelegate.swift in Sources */,
 				4B4218E12BE3E4DC001B911C /* UniversityObject.swift in Sources */,
 				4B4218E22BE3E4DC001B911C /* RealmManager.swift in Sources */,
-				4B4219012BE4460F001B911C /* AppRouter.swift in Sources */,
+				4B4219012BE4460F001B911C /* MainAppRouter.swift in Sources */,
 				4B4218DD2BE3E49D001B911C /* UniversityApiSevice.swift in Sources */,
 				4B4218DE2BE3E49D001B911C /* NetworkErrors.swift in Sources */,
 				4B4218E42BE3E4EF001B911C /* Constants.swift in Sources */,
@@ -606,6 +602,7 @@
 				DEVELOPMENT_TEAM = PMW98A49XJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MainApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Xische Task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -633,6 +630,7 @@
 				DEVELOPMENT_TEAM = PMW98A49XJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MainApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Xische Task";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

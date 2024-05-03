@@ -8,7 +8,7 @@
 import UIKit
 
 class UniversityTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var universityNameLable: UILabel!
     @IBOutlet weak var universityStateLable: UILabel!
     

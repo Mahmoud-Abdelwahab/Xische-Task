@@ -32,8 +32,8 @@ extension  UniversityRepository: UniversityRepositoryProtocol{
                 }
             }
         } else {
-            guard let universities = fetchUniversitiesFromRealm() else {
-                completion(.failure(NSError(domain: "No cached data", code: 0, userInfo: nil)))
+            guard let universities = fetchUniversitiesFromRealm(), !universities.isEmpty else {
+                completion(.failure(NSError(domain: "❌ No Internet and No cached data ❌", code: 0, userInfo: nil)))
                 return
             }
             completion(.success(universities))
@@ -44,7 +44,7 @@ extension  UniversityRepository: UniversityRepositoryProtocol{
 //MARK: - Private Handlers
 extension  UniversityRepository {
     private func mapToViewModel(response: [UniversityResponse])-> [UniversityCellVM] {
-       let universityCellViewModel =  response.map {
+        let universityCellViewModel =  response.map {
             $0.toUniversityCellVM()
         }
         self.saveUniversitiesToRealm(universityCellViewModel)
@@ -58,7 +58,7 @@ extension  UniversityRepository {
             debugPrint(error)
         }
     }
- 
+    
     private func fetchUniversitiesFromRealm() -> [UniversityCellVM]? {
         realm.fetchUniversitiesFromRealmDB()
     }

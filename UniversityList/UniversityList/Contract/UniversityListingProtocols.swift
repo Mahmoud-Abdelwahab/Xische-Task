@@ -16,7 +16,7 @@ protocol UniversityListViewProtocol: AnyObject {
 }
 
 // MARK: - Presenter
-protocol UniversityListPresenterProtocol {
+protocol UniversityListPresenterProtocol: AnyObject  {
     init(view: UniversityListViewProtocol,
          interactor: UniversityListInteractorInputProtocol,
          router: UniversityListRouterProtocol)
@@ -38,9 +38,16 @@ protocol UniversityListInteractorOutputProtocol: AnyObject {
 }
 
 // MARK: - Router
-public protocol UniversityListRouterProtocol {
+public protocol UniversityListRouterProtocol: AnyObject {
     func showAlert(with message: String)
+    func navigateToDetailsScreen(with model: UniversityCellVM)
 }
+
+// MARK: - Refresh List Delegate
+public protocol RefreshScreenActionDelegate: AnyObject {
+    func didTapRefreshScreenAction()
+}
+
 
 // MARK: -  University Cell Protocol
 protocol UniversityTableViewCellProtocol {
