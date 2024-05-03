@@ -26,4 +26,5 @@ protocol UniversityDetailsPresenterProtocol {
 // MARK: - Router
 public protocol UniversityDetailsRouterProtocol {
     func openSafariBrowser(with webPageUrl: URL)
+    func dismiss()
 }

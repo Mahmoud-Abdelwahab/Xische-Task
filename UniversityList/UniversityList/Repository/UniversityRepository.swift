@@ -32,8 +32,8 @@ extension  UniversityRepository: UniversityRepositoryProtocol{
                 }
             }
         } else {
-            guard let universities = fetchUniversitiesFromRealm() else {
-                completion(.failure(NSError(domain: "No cached data", code: 0, userInfo: nil)))
+            guard let universities = fetchUniversitiesFromRealm(), !universities.isEmpty else {
+                completion(.failure(NSError(domain: "❌ No Internet and No cached data ❌", code: 0, userInfo: nil)))
                 return
             }
             completion(.success(universities))

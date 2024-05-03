@@ -33,6 +33,7 @@ extension UniversityDetailsPresenter: UniversityDetailsPresenterProtocol {
     }
     
     func refreshButtonTapped() {
+        router.dismiss()
         refreshAction?()
     }
     

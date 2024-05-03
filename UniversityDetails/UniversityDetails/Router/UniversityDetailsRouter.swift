@@ -31,8 +31,8 @@ extension UniversityDetailsRouter: UniversityDetailsRouterProtocol {
     
     // MARK: - Navigation
     
-    private func navigateToBack() {
-        viewController?.navigationController?.dismiss(animated: true)
+    public func dismiss() {
+        viewController?.dismiss(animated: true)
     }
     
     public func openSafariBrowser(with webPageUrl: URL) {
