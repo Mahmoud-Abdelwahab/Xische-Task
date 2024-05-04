@@ -43,6 +43,7 @@ To run the application:
 - Build and run the application on a simulator or device.
 
 # Usage
+- Clone App from Main Branch
 - Upon launching the application, Module A's listing screen will be displayed.
 - Module A fetches data from the external API and caches it locally using Realm.
 - If the API request fails, Module A retrieves data from the local cache.
