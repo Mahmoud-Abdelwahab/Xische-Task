@@ -27,7 +27,7 @@ The application follows the VIPER architecture to ensure modularity, separation 
 - Network requests handled using URLSession.
 - Offline support by retrieving data from local cache in case of API failure.
 - Simple UI design to focus on functionality.
-- added some unite tests
+- Added Simple unite tests
 
 # Requirements
 - Xcode 15.0.1
@@ -46,11 +46,11 @@ To run the application:
 - Clone App from Main Branch
 - Upon launching the application, Module A's listing screen will be displayed.
 - Module A fetches data from the external API and caches it locally using Realm.
-- If the API request fails, Module A retrieves data from the local cache.
+- If the API request fails Or No internet Connection, Module A retrieves data from the local cache.
 - Tap on an item in the listing screen to navigate to Module B's details screen.
 - Module B displays detailed information about the selected item.
 - Tap the refresh button in Module B to dismiss Details screen then refresh of Module A's listing screen.
-- The API dosnt support pagination and also i make the coutry as Constant UAE because no place in the UI we can change the country from it
+- `The API dosnt support pagination and also i make the coutry as Constant UAE because no place in the UI we can change the country from it
   
 # Notes; - 
 - I created main app and two sub frameworks for the two screens 
