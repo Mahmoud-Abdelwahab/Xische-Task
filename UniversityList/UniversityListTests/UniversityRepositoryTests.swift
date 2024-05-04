@@ -12,6 +12,9 @@ class UniversityRepositoryTests: XCTestCase {
         
     class MockUniversityApiService: UniversityApiSeviceProtocol {
         func fetchUniversities(completion: @escaping (Result<[UniversityResponse], Error>) -> Void) {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
+                completion(.success([]))
+            }
         }
     }
     
@@ -47,6 +50,8 @@ class UniversityRepositoryTests: XCTestCase {
             }
         }
         
+        // Wait for 5 seconds, adjust the timeout duration as needed
         wait(for: [expectation], timeout: 5.0)
     }
 }
+
