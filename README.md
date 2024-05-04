@@ -44,6 +44,7 @@ To run the application:
 
 # Usage
 - Clone App from Main Branch
+- `Please make sure that you are selecting the Main App Target not any unite test target and Run the App after Realm SPM finishs loading`
 - Upon launching the application, Module A's listing screen will be displayed.
 - Module A fetches data from the external API and caches it locally using Realm.
 - If the API request fails Or No internet Connection, Module A retrieves data from the local cache.
