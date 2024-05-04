@@ -33,7 +33,7 @@ The application follows the VIPER architecture to ensure modularity, separation 
 - Xcode 15.0.1
 - XCode instruments leak tool
 - UIKit framework
-- RealmSwift framework
+- RealmSwift SPM No PODs exists
 
 # Installation
 To run the application:
