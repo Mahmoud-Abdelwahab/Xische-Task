@@ -9,12 +9,12 @@ import Foundation
 
 
 class UniversityRepository {
-    private let universityApiSevice: UniversityApiSeviceProtocol
-    private let realm: UniversityCachingProtocol
+    private let remoteApiSevice: UniversityApiSeviceProtocol
+    private let localStorage: UniversityCachingProtocol
     
     init(universityApiSevice: UniversityApiSeviceProtocol, realm: UniversityCachingProtocol) {
-        self.universityApiSevice = universityApiSevice
-        self.realm = realm
+        self.remoteApiSevice = universityApiSevice
+        self.localStorage = realm
     }
 }
 
@@ -22,7 +22,7 @@ class UniversityRepository {
 extension  UniversityRepository: UniversityRepositoryProtocol{
     func fetchUniversities(completion: @escaping (FetchedResult) -> Void) {
         if Reachability.shared.isConnectedToNetwork() {
-            universityApiSevice.fetchUniversities { [weak self] result  in
+            remoteApiSevice.fetchUniversities { [weak self] result  in
                 guard let self = self else { return }
                 DispatchQueue.main.async {
                     switch result {
@@ -67,13 +67,13 @@ extension  UniversityRepository {
     
     private func saveUniversitiesToRealm(_ universities: [UniversityCellVM])  {
         do {
-            try realm.saveUniversitiesToRealmDB(universities)
+            try localStorage.saveUniversitiesToRealmDB(universities)
         } catch {
             debugPrint(error)
         }
     }
     
     private func fetchUniversitiesFromRealm() -> [UniversityCellVM]? {
-        realm.fetchUniversitiesFromRealmDB()
+        localStorage.fetchUniversitiesFromRealmDB()
     }
 }
