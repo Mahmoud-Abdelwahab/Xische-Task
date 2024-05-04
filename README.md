@@ -27,11 +27,13 @@ The application follows the VIPER architecture to ensure modularity, separation 
 - Network requests handled using URLSession.
 - Offline support by retrieving data from local cache in case of API failure.
 - Simple UI design to focus on functionality.
+- Added Simple unite tests
 
 # Requirements
-- Xcode 15.0.1 
+- Xcode 15.0.1
+- XCode instruments leak tool
 - UIKit framework
-- RealmSwift framework
+- RealmSwift SPM No PODs exists
 
 # Installation
 To run the application:
@@ -41,13 +43,15 @@ To run the application:
 - Build and run the application on a simulator or device.
 
 # Usage
+- Clone App from Main Branch
+- `Please make sure that you are selecting the Main App Target not any unite test target and Run the App after Realm SPM finishs loading`
 - Upon launching the application, Module A's listing screen will be displayed.
 - Module A fetches data from the external API and caches it locally using Realm.
-- If the API request fails, Module A retrieves data from the local cache.
+- `If the API request fails Or No internet Connection, Module A retrieves data from the local cache.`
 - Tap on an item in the listing screen to navigate to Module B's details screen.
 - Module B displays detailed information about the selected item.
 - Tap the refresh button in Module B to dismiss Details screen then refresh of Module A's listing screen.
-- The API dosnt support pagination and also i make the coutry as Constant UAE because no place in the UI we can change the country from it
+- `The API dosnt support pagination and i setted the coutry as Constant UAE because no place in the UI we can change the country from it`
   
 # Notes; - 
 - I created main app and two sub frameworks for the two screens 
@@ -59,3 +63,4 @@ To run the application:
 - I used two different  ui models  for list and details to ensure separation of concerns 
 - Tried to apply solid  as much as i could 
 - Any module need to use realm or network service it needs to create protocol to use it throught protocols ... and realm manager, network service implements this protocol 
+- app free from memeory leaks i tested it using XCode instruments leak tool
